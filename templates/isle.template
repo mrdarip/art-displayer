@@ -1,5 +1,5 @@
-<a-box class="wall" position="${xpos} ${height/2} ${ypos}" width="${npaintings * margin + margin * 0.5}" height="${height}">
-    <a-entity class="paintings" layout="type: line; margin: ${margin}" position="-1.5 0 0.51" paintings-list="${paintings}">
+<a-box class="wall" position="${xpos} ${height/2} ${ypos}" width="${npaintings * Number(imgwidth) + (Number(npaintings)+1) * (Number(margin))}" height="${height}">
+    <a-entity class="paintings" layout="type: line; margin: ${Number(imgwidth) + Number(margin)}" position="${-0.5 * npaintings * Number(imgwidth) + -0.5 * (Number(npaintings)+1) * (Number(margin)) + 2 * margin} 0 0.51" paintings-list="${paintings}">
         <!- append paintings here -->
     </a-entity>
 </a-box>
