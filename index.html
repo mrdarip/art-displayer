@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
     <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
     
-    <script src="./js/painting-component.js"></script>
+    <script src="./components/paintings-list.js"></script>
 </head>
 <body>
     <a-scene>
@@ -25,7 +25,11 @@
           </a-assets>
         
           <!-- Link template we will build. -->
-          <a-entity template="src: ./templates/isle.template" data-height="3" data-xpos="0" data-ypos="10"></a-entity>
+          <a-entity template="src: ./templates/isle.template" data-height="3" data-xpos="0" data-ypos="10" 
+          data-paintings="list: 
+          https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg,
+          https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg,
+          https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg"></a-entity>
           
 
           <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>

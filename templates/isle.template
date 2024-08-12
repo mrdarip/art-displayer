@@ -1,7 +1,5 @@
 <a-box class="wall" position="${xpos} ${height/2} ${ypos}" width="5" height="${height}">
-    <a-entity class="paintings" layout="type: line; margin: 1.5" position="-1.5 0 0.51">
-        <a-entity template="src: ./painting.template" data-thumb="#city-thumb"></a-entity>
-        <a-entity template="src: ./painting.template" data-thumb="#cubes-thumb"></a-entity>
-        <a-entity template="src: ./painting.template" data-thumb="#sechelt-thumb"></a-entity>
+    <a-entity class="paintings" layout="type: line; margin: 1.5" position="-1.5 0 0.51" paintings-list="${paintings}">
+        <!- append paintings here -->
     </a-entity>
 </a-box>
