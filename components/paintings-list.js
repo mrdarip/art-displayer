@@ -4,6 +4,7 @@ AFRAME.registerComponent('paintings-list', {
     },
   
     init: function () {
+      //this.el.setAttribute('data-nPaintings', this.data.list.length);
       for (let i = 0; i < this.data.list.length; i++) {
         // Create image element and appnd to this entity <a-entity template="src: ./painting.template" data-thumb="#city-thumb"></a-entity>
         const painting = document.createElement('a-entity');
