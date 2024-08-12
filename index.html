@@ -16,6 +16,15 @@
           material="shader: flat; src: ${thumb}"
           sound="on: click; src: #click-sound"></a-entity>
     </script>
+
+    <script id="isle" type="text/html">
+      <a-box class="wall" position="${xpos} ${height/2} ${ypos-1}" width="5" height="${height}"></a-box>
+      <a-entity class="paintings" layout="type: line; margin: 1.5" position="-1.5 ${height/2} ${ypos}">
+        <a-entity template="src: #painting" data-thumb="#city-thumb"></a-entity>
+        <a-entity template="src: #painting" data-thumb="#cubes-thumb"></a-entity>
+        <a-entity template="src: #painting" data-thumb="#sechelt-thumb"></a-entity>
+      </a-entity>
+  </script>
 </head>
 <body>
     <a-scene>
@@ -32,15 +41,11 @@
           </a-assets>
         
           <!-- Link template we will build. -->
-            <a-box position="0 1.5 -4.6" width="5" height="3"></a-box>
-          <a-entity id="paintings" layout="type: line; margin: 1.5" position="-1.5 1.5 -4">
-            <a-entity template="src: #painting" data-thumb="#city-thumb"></a-entity>
-            <a-entity template="src: #painting" data-thumb="#cubes-thumb"></a-entity>
-            <a-entity template="src: #painting" data-thumb="#sechelt-thumb"></a-entity>
-          </a-entity>
+            <a-entity template="src: #isle" data-height="3" data-xpos="0" data-ypos="10"></a-entity>
+          
 
           <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
-        
+          <a-sky color="#ECECEC"></a-sky>
           <!-- Camera + Cursor. -->
           <a-camera>
             <a-cursor
