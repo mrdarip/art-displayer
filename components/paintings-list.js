@@ -1,6 +1,4 @@
 AFRAME.registerComponent('paintings-list', {
-    // array + single property schema does not appear to work.
-    // See: https://github.com/aframevr/aframe/issues/5242
     schema: {
       list: { type: 'array' }    
     },
