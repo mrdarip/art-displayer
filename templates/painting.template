@@ -1,6 +1,6 @@
 <a-entity 
     class="painting"
     geometry="primitive: plane; height: 1; width: 1"
-    material="shader: flat; src: ${thumb}"
+    material="shader: flat; src: ${thumb}; side:double"
     sound="on: click; src: #click-sound"
 ></a-entity>

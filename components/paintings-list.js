@@ -13,9 +13,12 @@ AFRAME.registerComponent('paintings-list', {
         painting.setAttribute('data-thumb', this.data.list[i]);
 
         if(this.data.objetive) {
-          painting.setAttribute('look-at', this.data.objetive);
-          painting.setAttribute('rotation', "0 90 0");
-          console.log(this.data.objetive);
+          if(this.data.objetive == "#parent#"){
+            painting.setAttribute('look-at', "#"+this.el.parentElement.id);
+          }else{
+            painting.setAttribute('look-at', this.data.objetive);
+            painting.setAttribute('rotation', "0 90 0");
+          }
         }
 
         this.el.appendChild(painting);
