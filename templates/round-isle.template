@@ -1,4 +1,9 @@
-<a-cylinder class="round-wall" position="0 ${height/2} 0" radius="${5}"  segments-radial="${paintings.split(",").length}">
+<a-cylinder class="round-wall" position="0 ${height/2} 0" 
+    radius="${0.5 * Math.sin(720/paintings.split(",").length)*(2*margin+imgwidth)}"  
+    segments-radial="${paintings.split(",").length}">
+    height="${height}
+    side="double"
+    
     <a-entity class="paintings" layout="type: line; margin: ${Number(imgwidth) + Number(margin)}" position="${-0.5 * paintings.split(",").length * Number(imgwidth) + -0.5 * (paintings.split(",").length+1) * (Number(margin)) + 2 * margin} 0 0.51" paintings-list="${paintings}">
         <!- append paintings here -->
     </a-entity>
