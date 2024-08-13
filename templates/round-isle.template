@@ -7,7 +7,7 @@
     side="double"
     material="color: #FFFFFF; shader: flat"
 >
-    <a-entity class="paintings" layout="type: line; margin: ${Number(imgwidth) + Number(margin)}" position="${-0.5 * paintings.split(",").length * Number(imgwidth) + -0.5 * (paintings.split(",").length+1) * (Number(margin)) + 2 * margin} 0 0.51" paintings-list="${paintings}">
+    <a-entity class="paintings" layout="type: circle; radius: 2.5; angle: 360;" position="0 0 0.51" paintings-list="${paintings}">
         <!- append paintings here -->
     </a-entity>
 </a-cylinder>
