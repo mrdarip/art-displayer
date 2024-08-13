@@ -10,7 +10,7 @@ AFRAME.registerComponent('round-paintings-list', {
         const painting = document.createElement('a-entity');
         painting.setAttribute('template', 'src: ./templates/painting.template');
         painting.setAttribute('data-thumb', this.data.list[i]);
-        painting.setAttribute('rotation', "0 "+ (360/len) +" 0");
+        painting.setAttribute('rotation', "0 "+ (-i *360/len + 90) +" 0");
 
         this.el.appendChild(painting);
 
