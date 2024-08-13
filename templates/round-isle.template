@@ -6,13 +6,13 @@
     height="${height}
     side="double"
     material="color: #FFFFFF; shader: flat"
-    id=${"wall-"+self.crypto.randomUUID()}
 >
     <a-entity 
     class="paintings"
-    layout="type: circle; radius: 2.5; plane:xz;"
-    position="0 0 0.51"
-    paintings-list="${paintings}; objetive:#parent#">
+    layout="type: circle; radius: ${0.5 * Math.sin(720/paintings.split(",").length)*(2*margin+imgwidth) * (1 - (1 - Math.cos(720/paintings.split(",").length)))}; plane:xz;"
+    position="0 0 0"
+    
+    round-paintings-list="${paintings}">
         <!- append paintings here -->
     </a-entity>
 </a-cylinder>

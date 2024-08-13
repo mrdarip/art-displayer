@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 
     <script src="./components/paintings-list.js"></script>
+    <script src="./components/round-paintings-list.js"></script>
 </head>
 <body>
     <a-scene>
@@ -45,14 +46,13 @@
           data-margin="0.5"
           data-imgwidth="1"></a-entity>
 
-          <a-entity template="src: ./templates/round-isle.template" position="-10 0 0" rotation="0 90 0"
+          <a-entity template="src: ./templates/round-isle.template" position="-10 10 0" rotation="0 90 0"
           data-height="3"
           data-paintings="list: 
           ./img/sky2.jpg,
           #sechelt-thumb,
           ./img/sky3.jpg,
-          ./img/sky4.jpg,
-          ./img/sky1.jpg"
+          ./img/sky4.jpg,"
           data-margin="0.5"
           data-imgwidth="1"
           test></a-entity>
