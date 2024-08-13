@@ -9,8 +9,9 @@
 > -->
     <a-entity 
     class="paintings"
-    layout="type: circle; radius: 2.5; angle: ${360/paintings.split(",").length};plane:xz;"
-    position="0 0 0.51" paintings-list="${paintings}">
+    layout="type: circle; radius: 2.5; plane:xz;"
+    position="0 0 0.51"
+    paintings-list="${paintings}; objetive:[test]">
         <!- append paintings here -->
     </a-entity>
 <!-- </a-cylinder> -->

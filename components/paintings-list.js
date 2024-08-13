@@ -1,6 +1,7 @@
 AFRAME.registerComponent('paintings-list', {
     schema: {
-      list: { type: 'array' }    
+      list: { type: 'array' },
+      objetive : {type: 'string'}
     },
   
     init: function () {
@@ -10,6 +11,13 @@ AFRAME.registerComponent('paintings-list', {
         const painting = document.createElement('a-entity');
         painting.setAttribute('template', 'src: ./templates/painting.template');
         painting.setAttribute('data-thumb', this.data.list[i]);
+
+        if(this.data.objetive) {
+          painting.setAttribute('look-at', this.data.objetive);
+          painting.setAttribute('rotation', "0 90 0");
+          console.log(this.data.objetive);
+        }
+
         this.el.appendChild(painting);
       }
     },
