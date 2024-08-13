@@ -1,4 +1,4 @@
-<a-cylinder
+<!-- <a-cylinder
     class="round-wall" 
     position="0 ${height/2} 0" 
     radius="${0.5 * Math.sin(720/paintings.split(",").length)*(2*margin+imgwidth)}"  
@@ -6,8 +6,11 @@
     height="${height}
     side="double"
     material="color: #FFFFFF; shader: flat"
->
-    <a-entity class="paintings" layout="type: circle; radius: 2.5; angle: 360;" position="0 0 0.51" paintings-list="${paintings}">
+> -->
+    <a-entity 
+    class="paintings"
+    layout="type: circle; radius: 2.5; angle: ${360/paintings.split(",").length};plane:xz;"
+    position="0 0 0.51" paintings-list="${paintings}">
         <!- append paintings here -->
     </a-entity>
-</a-cylinder>
+<!-- </a-cylinder> -->
