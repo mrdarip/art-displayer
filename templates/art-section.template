@@ -1,0 +1,3 @@
+<a-entity class="art-section" art-section="${paintings}">
+    <!- simple isles -->
+</a-entity>

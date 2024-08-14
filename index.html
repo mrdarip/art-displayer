@@ -11,6 +11,7 @@
 
     <script src="./components/paintings-list.js"></script>
     <script src="./components/round-paintings-list.js"></script>
+    <script src="./components/art-section.js"></script>
 </head>
 <body>
     <a-scene>
@@ -46,16 +47,18 @@
           data-margin="0.5"
           data-imgwidth="1"></a-entity>
 
-          <a-entity template="src: ./templates/round-isle.template" position="-10 10 0" rotation="0 90 0"
-          data-height="3"
-          data-paintings="list: 
+          <a-entity template="src: ./templates/art-section.template" position="-10 10 0" rotation="0 90 0"
+          data-paintings="
+          paintings: 
           ./img/sky2.jpg,
           #sechelt-thumb,
           ./img/sky3.jpg,
-          ./img/sky4.jpg,"
-          data-margin="0.5"
-          data-imgwidth="1"
-          test></a-entity>
+          ./img/sky4.jpg;
+          
+          width: 30;
+          height: 30;
+          name: test;"
+          ></a-entity>
           
 
           <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
