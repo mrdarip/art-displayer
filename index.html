@@ -14,7 +14,7 @@
     <script src="./components/art-section.js"></script>
 </head>
 <body>
-    <a-scene>
+    <a-scene fog="type: linear; color: #FFF; near:10;far:30">
         <a-assets id="a-assets">
             <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
         
@@ -26,7 +26,10 @@
             <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
             <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
           </a-assets>
-        
+
+          <a-entity light="type: directional; color: #FFF; intensity: 0.6; castShadow:true" position="-0.5 1 1"></a-entity>
+          <a-entity light="type: ambient; color: #BBB"></a-entity>
+          
           <!-- Link template we will build. -->
           <a-entity template="src: ./templates/isle.template"position="0 0 -10" rotation="0 0 0"
           data-height="3"
@@ -189,7 +192,7 @@
           name: test;"
           ></a-entity>
 
-          <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+          <a-plane shadow="recieve:true" position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4" material="shader: flat;"></a-plane>
           <a-sky color="#ECECEC"></a-sky>
           <!-- Camera + Cursor. -->
           <a-camera>
